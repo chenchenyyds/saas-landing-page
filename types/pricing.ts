@@ -22,6 +22,7 @@ export type Tier = {
   key: TiersEnum;
   title: string;
   price: string;
+  yearlyPrice?: string;
   priceSuffix?: string;
   href: string;
   description?: string;
