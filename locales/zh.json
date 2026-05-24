@@ -1,9 +1,21 @@
 {
   "Hero": {
+    "badge": "数小时内上线你的产品",
     "title1": "快速构建",
     "title2": "落地页",
     "title3": "",
-    "description": "一个免费、开源且强大的落地页模板，适用于各种项目，让你在一个小时内搭建落地页。"
+    "rotatingPrefix": "适用于",
+    "rotatingTexts": ["SaaS产品", "落地页面", "创业网站", "副项目"],
+    "description": "一个免费、开源且强大的落地页模板，适用于各种项目，让你在一个小时内搭建出令人惊艳的落地页。",
+    "secondaryCTA": {
+      "text": "查看功能",
+      "href": "#Features"
+    },
+    "stats": [
+      { "value": "1000+", "label": "开发者" },
+      { "value": "10k+", "label": "下载量" },
+      { "value": "4.9", "label": "评分" }
+    ]
   },
   "SocialProof": {
     "maker": "制作者快速开发"
@@ -13,12 +25,16 @@
     "description": "与1000+创作者一起，使用我们的落地页模板提升转化率"
   },
   "Feature": {
-    "title": "Feature"
+    "title": "功能特性",
+    "subtitle": "使用现代Web技术构建高转化率落地页所需的一切。"
   },
   "Pricing": {
     "title": "定价",
-    "title2": "拥有无限访问权限",
-    "description": "你当前查看的页面是一个开源的、免费的模板。",
+    "description": "选择最适合你和你的团队的方案。",
+    "mostPopular": "最受欢迎",
+    "toggleMonthly": "按月",
+    "toggleYearly": "按年",
+    "saveLabel": "省20%",
     "doYouLike": "你喜欢这个落地页模板吗？",
     "follow": "关注我的推特。"
   },
@@ -29,8 +45,9 @@
     "description3": "，我会在这里展示你的推文和推荐。"
   },
   "FAQ": {
-    "title": "FAQs",
-    "description": "这里有一些最常见的问题。"
+    "title": "常见问题",
+    "description": "这里有一些最常见的问题。",
+    "bottomText": "还有问题？欢迎联系我们。"
   },
   "CTA": {
     "title": "立即构建你的落地页",
@@ -43,5 +60,37 @@
   },
   "CTAButton": {
     "title": "获取源码"
+  },
+  "Nav": {
+    "features": "功能",
+    "pricing": "定价",
+    "testimonials": "用户评价",
+    "faq": "常见问题",
+    "blog": "博客",
+    "contact": "联系我们"
+  },
+  "Contact": {
+    "title": "联系我们",
+    "description": "有问题或需要帮助？给我们发送消息，我们会尽快回复。",
+    "nameLabel": "姓名",
+    "namePlaceholder": "你的姓名",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "消息",
+    "messagePlaceholder": "告诉我们你需要什么帮助...",
+    "submitText": "发送消息",
+    "sendingText": "发送中...",
+    "sentText": "已发送！",
+    "successMessage": "消息发送成功！",
+    "errorMessage": "消息发送失败，请重试。",
+    "validation": {
+      "nameMin": "姓名至少需要2个字符",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "messageMin": "消息至少需要10个字符"
+    }
+  },
+  "Blog": {
+    "title": "博客",
+    "description": "最新文章和更新"
   }
 }

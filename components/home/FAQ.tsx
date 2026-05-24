@@ -3,8 +3,8 @@ import { ALL_FAQS } from "@/config/faqs";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { PlusIcon } from "lucide-react";
 import { RoughNotation } from "react-rough-notation";
+import { motion } from "framer-motion";
 
-// update rough notation highlight
 function triggerResizeEvent() {
   const event = new Event("resize");
   window.dispatchEvent(event);
@@ -24,16 +24,22 @@ const FAQ = ({
   return (
     <section
       id={id}
-      className="flex flex-col justify-center max-w-[88%] items-center py-16 gap-12"
+      className="flex flex-col justify-center max-w-3xl w-[95%] mx-auto items-center py-20 gap-12"
     >
-      <div className="flex flex-col text-center gap-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col text-center gap-4"
+      >
         <h2 className="text-center text-white">
           <RoughNotation type="highlight" show={true} color="#2563EB">
             {locale.title}
           </RoughNotation>
         </h2>
-        <p className="text-large text-default-500">{locale.description}</p>
-      </div>
+        <p className="text-lg text-default-500">{locale.description}</p>
+      </motion.div>
+
       <Accordion
         fullWidth
         keepContentMounted
@@ -60,6 +66,17 @@ const FAQ = ({
           </AccordionItem>
         ))}
       </Accordion>
+
+      {locale.bottomText && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-default-400"
+        >
+          {locale.bottomText}
+        </motion.p>
+      )}
     </section>
   );
 };

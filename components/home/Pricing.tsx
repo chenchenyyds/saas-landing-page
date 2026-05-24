@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Button,
   Card,
@@ -10,7 +12,6 @@ import {
   Link,
   Spacer,
 } from "@nextui-org/react";
-
 import { siteConfig } from "@/config/site";
 import { ALL_TIERS } from "@/config/tiers";
 import { FaCheck } from "react-icons/fa";
@@ -25,69 +26,140 @@ const Pricing = ({
   locale: any;
   langName: string;
 }) => {
+  const [isYearly, setIsYearly] = useState(false);
   const TIERS = ALL_TIERS[`TIERS_${langName.toUpperCase()}`];
+
   return (
     <section
       id={id}
-      className="flex flex-col justify-center max-w-4xl items-center pt-16"
+      className="flex flex-col justify-center max-w-5xl items-center pt-20"
     >
-      <div className="flex flex-col text-center max-w-xl">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col text-center max-w-xl"
+      >
         <h2 className="text-center text-white">
           <RoughNotation type="highlight" show={true} color="#2563EB">
             {locale.title}
           </RoughNotation>
         </h2>
-        <h3 className="text-4xl font-medium tracking-tight mt-2">
-          {locale.title2}
-        </h3>
         <Spacer y={4} />
-        <p className="text-large text-default-500">{locale.description}</p>
-      </div>
+        <p className="text-lg text-default-500">{locale.description}</p>
+      </motion.div>
+
+      {/* Monthly/Yearly Toggle */}
+      {locale.toggleMonthly && locale.toggleYearly && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10 flex items-center gap-3 bg-default-100 rounded-full p-1"
+        >
+          <button
+            onClick={() => setIsYearly(false)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              !isYearly
+                ? "bg-background text-foreground shadow-sm"
+                : "text-default-500"
+            }`}
+          >
+            {locale.toggleMonthly}
+          </button>
+          <button
+            onClick={() => setIsYearly(true)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              isYearly
+                ? "bg-background text-foreground shadow-sm"
+                : "text-default-500"
+            }`}
+          >
+            {locale.toggleYearly}
+            {locale.saveLabel && (
+              <span className="ml-1.5 inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-2 py-0.5 text-xs font-medium text-green-700 dark:text-green-300">
+                {locale.saveLabel}
+              </span>
+            )}
+          </button>
+        </motion.div>
+      )}
+
       <Spacer y={8} />
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 justify-items-center">
-        {TIERS?.map((tier) => (
-          <Card key={tier.key} className="p-3 flex-1 w-[90%]" shadow="md">
-            <CardHeader className="flex flex-col items-start gap-2 pb-6">
-              <h2 className="text-large font-medium">{tier.title}</h2>
-              <p className="text-medium text-default-500">{tier.description}</p>
-            </CardHeader>
-            <Divider />
-            <CardBody className="gap-8">
-              <p className="flex items-baseline gap-1 pt-2">
-                <span className="inline bg-gradient-to-br from-foreground to-foreground-600 bg-clip-text text-2xl font-semibold leading-7 tracking-tight text-transparent">
-                  {tier.price}
-                </span>
-                {typeof tier.price !== "string" ? (
-                  <span className="text-small font-medium text-default-400">
-                    {tier.price}
+
+      {/* Pricing Cards */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 justify-items-center w-full max-w-4xl">
+        {TIERS?.map((tier, index) => (
+          <motion.div
+            key={tier.key}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            className={tier.mostPopular ? "relative scale-[1.02] w-full" : "w-full"}
+          >
+            <Card
+              className={`p-3 w-full ${
+                tier.mostPopular
+                  ? "border-2 border-blue-500 bg-blue-50/50 dark:bg-blue-950/20 shadow-lg shadow-blue-500/10"
+                  : ""
+              }`}
+              shadow="md"
+            >
+              {tier.mostPopular && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-1 text-xs font-semibold text-white z-10">
+                  {locale.mostPopular || "Most Popular"}
+                </div>
+              )}
+              <CardHeader className="flex flex-col items-start gap-2 pb-6">
+                <h2 className="text-xl font-bold">{tier.title}</h2>
+                <p className="text-sm text-default-500">{tier.description}</p>
+              </CardHeader>
+              <Divider />
+              <CardBody className="gap-6">
+                <p className="flex items-baseline gap-1 pt-2">
+                  <span className="text-4xl font-bold">
+                    {isYearly ? tier.yearlyPrice || tier.price : tier.price}
                   </span>
-                ) : null}
-              </p>
-              <ul className="flex flex-col gap-2">
-                {tier.features?.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2">
-                    <FaCheck className="text-blue-500" />
-                    <p className="text-default-500">{feature}</p>
-                  </li>
-                ))}
-              </ul>
-            </CardBody>
-            <CardFooter>
-              <Button
-                fullWidth
-                as={Link}
-                color={tier.buttonColor}
-                href={tier.href}
-                variant={tier.buttonVariant}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                {tier.buttonText}
-              </Button>
-            </CardFooter>
-          </Card>
+                  {tier.priceSuffix && (
+                    <span className="text-sm text-default-400 ml-1">
+                      {tier.priceSuffix}
+                    </span>
+                  )}
+                </p>
+                <ul className="flex flex-col gap-3">
+                  {tier.features?.map((feature) => (
+                    <li key={feature} className="flex items-center gap-2">
+                      <FaCheck className="text-blue-500 flex-shrink-0" />
+                      <p className="text-sm text-default-500">{feature}</p>
+                    </li>
+                  ))}
+                </ul>
+              </CardBody>
+              <CardFooter>
+                <Button
+                  fullWidth
+                  as={Link}
+                  color={tier.buttonColor}
+                  href={tier.href}
+                  variant={tier.buttonVariant}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={
+                    tier.mostPopular
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold"
+                      : ""
+                  }
+                >
+                  {tier.buttonText}
+                </Button>
+              </CardFooter>
+            </Card>
+          </motion.div>
         ))}
       </div>
+
       <Spacer y={12} />
       <div className="flex py-2">
         <p className="text-default-400 text-center">
