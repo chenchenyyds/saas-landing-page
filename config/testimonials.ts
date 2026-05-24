@@ -3,8 +3,8 @@ export const TestimonialsData = [
   {
     user: {
       name: "Founder",
-      username: "weijunext",
-      image: "/images/users/weijunext.jpeg",
+      username: "chenchenyyds",
+      image: "/images/users/1.png",
     },
     content:
       "As a front-end developer, I'm highly satisfied with this landing page template. Editing text and images was very intuitive, and I encountered no technical hurdles throughout the process. The template's responsive design is excellent as well; whether on mobile or desktop, the page layout adapts perfectly. I managed to launch my own product's landing page in just half a day, significantly boosting my efficiency.",
@@ -12,7 +12,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User1",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/1.png",
     },
     content:
@@ -21,7 +21,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User2",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/2.png",
     },
     content:
@@ -30,7 +30,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User3",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/3.png",
     },
     content:
@@ -39,7 +39,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User4",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/4.png",
     },
     content:
@@ -48,7 +48,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User5",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/5.png",
     },
     content:
@@ -57,7 +57,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User6",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/4.png",
     },
     content:
@@ -66,7 +66,7 @@ export const TestimonialsData = [
   {
     user: {
       name: "User7",
-      username: "weijunext",
+      username: "chenchenyyds",
       image: "/images/users/5.png",
     },
     content:

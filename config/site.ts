@@ -1,32 +1,30 @@
 import { SiteConfig } from "@/types/siteConfig";
-import { BsGithub, BsTwitterX, BsWechat } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 
-const OPEN_SOURCE_URL = 'https://github.com/weijunext/landing-page-boilerplate'
+const OPEN_SOURCE_URL = 'https://github.com/chenchenyyds/saas-landing-page'
 
 const baseSiteConfig = {
-  name: "Landing page boilerplate",
+  name: "SaaS Fast",
   description:
-    "A free, open-source, and powerful landing page boilerplate, ideal for various projects, enabling you to create a landing page in under an hour.",
-  url: "https://landingpage.weijunext.com",
-  ogImage: "https://landingpage.weijunext.com/og.png",
+    "A modern, high-performance SaaS landing page built with Next.js, Tailwind CSS, and Framer Motion — ready to deploy and customize.",
+  url: "https://saas-landing-page-b2qzrnom0-chenchenyyds-projects.vercel.app",
+  ogImage: "/og.png",
   metadataBase: '/',
-  keywords: ["landing page boilerplate", "landing page template", "awesome landing page", "next.js landing page"],
+  keywords: ["saas", "landing page", "next.js", "tailwind css", "startup"],
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
-      twitter: 'https://twitter.com/weijunext',
+      name: "chenchenyyds",
+      url: "https://github.com/chenchenyyds",
     }
   ],
-  creator: '@weijunext',
-  openSourceURL: 'https://github.com/weijunext/landing-page-boilerplate',
+  creator: '@chenchenyyds',
+  openSourceURL: 'https://github.com/chenchenyyds/saas-landing-page',
   themeColors: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
-  nextThemeColor: 'dark', // next-theme option: system | dark | light
+  nextThemeColor: 'dark',
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
@@ -34,23 +32,15 @@ const baseSiteConfig = {
   },
   headerLinks: [
     { name: 'repo', href: OPEN_SOURCE_URL, icon: BsGithub },
-    { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
-    { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee }
   ],
   footerLinks: [
-    { name: 'email', href: "mailto:weijunext@gmail.com", icon: MdEmail },
-    { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
-    { name: 'github', href: "https://github.com/weijunext/", icon: BsGithub },
-    { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee },
-    { name: 'juejin', href: "https://juejin.cn/user/26044008768029", icon: SiJuejin },
-    { name: 'weChat', href: "https://weijunext.com/make-a-friend", icon: BsWechat }
+    { name: 'github', href: "https://github.com/chenchenyyds/", icon: BsGithub },
   ],
   footerProducts: [
-    { url: 'https://nexty.dev/', name: 'SaaS Starter' },
-    { url: 'https://landingpage.weijunext.com/', name: 'Landing Page Boilerplate' },
-    { url: 'https://weijunext.com/', name: 'J实验室' },
-    { url: 'https://nextjscn.org/', name: 'Next.js 中文文档' },
-    { url: 'https://github.com/weijunext/indie-hacker-tools', name: 'Indie Hacker Tools' },
+    { url: 'https://github.com/chenchenyyds/crm-dashboard', name: 'CRM Dashboard' },
+    { url: 'https://github.com/chenchenyyds/data-dashboard', name: 'Data Dashboard' },
+    { url: 'https://github.com/chenchenyyds/booking-appointment', name: 'Booking App' },
+    { url: 'https://github.com/chenchenyyds/api-automation', name: 'API Automation' },
   ]
 }
 
