@@ -16,6 +16,7 @@ const baseSiteConfig = {
     {
       name: "chenchenyyds",
       url: "https://github.com/chenchenyyds",
+      twitter: 'https://github.com/chenchenyyds',
     }
   ],
   creator: '@chenchenyyds',
