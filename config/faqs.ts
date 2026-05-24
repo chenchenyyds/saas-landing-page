@@ -42,7 +42,7 @@ export const FAQS_EN = [
   {
     title: "Do you offer any customization services?",
     content:
-      "We accept paid custom development of landing pages. Please contact us via email at weijunext@gmail.com or Twitter @weijunext.",
+      "We accept paid custom development of landing pages. Please contact us via email at https://github.com/chenchenyyds or Twitter @chenchenyyds.",
   },
   {
     title: "Are there any restrictions on using this template?",
@@ -57,7 +57,7 @@ export const FAQS_EN = [
   {
     title: "What should I do if I encounter problems using the template?",
     content:
-      "If you encounter any issues while using the template, please contact us via Twitter @weijunext.",
+      "If you encounter any issues while using the template, please contact us via Twitter @chenchenyyds.",
   },
 ];
 
@@ -105,7 +105,7 @@ export const FAQS_ZH = [
   {
     title: "你们提供定制服务吗？",
     content:
-      "我们接受落地页的定制开发服务。请通过电子邮件weijunext@gmail.com或Twitter @weijunext与我们联系。",
+      "我们接受落地页的定制开发服务。请通过电子邮件https://github.com/chenchenyyds或Twitter @chenchenyyds与我们联系。",
   },
   {
     title: "使用这个模板有任何限制吗？",
@@ -120,7 +120,7 @@ export const FAQS_ZH = [
   {
     title: "如果我在使用模板时遇到问题该怎么办？",
     content:
-      "如果你在使用模板时遇到任何问题，请通过Twitter @weijunext 与我们联系。",
+      "如果你在使用模板时遇到任何问题，请通过Twitter @chenchenyyds 与我们联系。",
   },
 ];
 
@@ -168,7 +168,7 @@ export const FAQS_JA = [
   {
     title: "カスタマイズサービスを提供していますか？",
     content:
-      "有料のランディングページのカスタム開発を受け付けています。メールweijunext@gmail.comまたはTwitter @weijunextでお問い合わせください。",
+      "有料のランディングページのカスタム開発を受け付けています。メールhttps://github.com/chenchenyydsまたはTwitter @chenchenyydsでお問い合わせください。",
   },
   {
     title: "このテンプレートを使用する際に制限はありますか？",
@@ -183,7 +183,7 @@ export const FAQS_JA = [
   {
     title: "テンプレートの使用中に問題に遭遇した場合、どうすればよいですか？",
     content:
-      "テンプレートの使用中に問題が発生した場合は、Twitter @weijunextでお問い合わせください。",
+      "テンプレートの使用中に問題が発生した場合は、Twitter @chenchenyydsでお問い合わせください。",
   },
 ];
 
@@ -232,7 +232,7 @@ export const FAQS_AR = [
   {
     title: "هل تقدمون خدمات تخصيص؟",
     content:
-      "نحن نقبل التطوير المخصص المدفوع لصفحات الهبوط. يرجى التواصل معنا عبر البريد الإلكتروني على weijunext@gmail.com أو تويتر @weijunext.",
+      "نحن نقبل التطوير المخصص المدفوع لصفحات الهبوط. يرجى التواصل معنا عبر البريد الإلكتروني على https://github.com/chenchenyyds أو تويتر @chenchenyyds.",
   },
   {
     title: "هل هناك قيود على استخدام هذا القالب؟",
@@ -247,7 +247,7 @@ export const FAQS_AR = [
   {
     title: "ماذا يجب أن أفعل إذا واجهت مشكلات أثناء استخدام القالب؟",
     content:
-      "إذا واجهت أي مشكلات أثناء استخدام القالب، فيرجى التواصل معنا عبر تويتر @weijunext.",
+      "إذا واجهت أي مشكلات أثناء استخدام القالب، فيرجى التواصل معنا عبر تويتر @chenchenyyds.",
   },
 ];
 
@@ -295,7 +295,7 @@ export const FAQS_ES = [
   {
     title: "¿Ofrecen servicios de personalización?",
     content:
-      "Aceptamos el desarrollo personalizado de páginas de destino a pedido. Por favor, contáctanos por correo electrónico a weijunext@gmail.com o en Twitter @weijunext.",
+      "Aceptamos el desarrollo personalizado de páginas de destino a pedido. Por favor, contáctanos por correo electrónico a https://github.com/chenchenyyds o en Twitter @chenchenyyds.",
   },
   {
     title: "¿Hay alguna restricción para usar esta plantilla?",
@@ -310,7 +310,7 @@ export const FAQS_ES = [
   {
     title: "¿Qué debo hacer si tengo problemas al usar la plantilla?",
     content:
-      "Si encuentras problemas mientras usas la plantilla, comunícate con nosotros a través de Twitter @weijunext.",
+      "Si encuentras problemas mientras usas la plantilla, comunícate con nosotros a través de Twitter @chenchenyyds.",
   },
 ];
 
@@ -358,7 +358,7 @@ export const FAQS_RU = [
   {
     title: "Предлагаете ли вы услуги по кастомизации?",
     content:
-      "Мы принимаем заказные разработки целевых страниц. Пожалуйста, свяжитесь с нами по электронной почте weijunext@gmail.com или в Twitter @weijunext.",
+      "Мы принимаем заказные разработки целевых страниц. Пожалуйста, свяжитесь с нами по электронной почте https://github.com/chenchenyyds или в Twitter @chenchenyyds.",
   },
   {
     title: "Есть ли какие-либо ограничения на использование этого шаблона?",
@@ -373,7 +373,7 @@ export const FAQS_RU = [
   {
     title: "Что мне делать, если я столкнусь с проблемами при использовании шаблона?",
     content:
-      "Если вы столкнетесь с какими-либо проблемами при использовании шаблона, пожалуйста, свяжитесь с нами через Twitter @weijunext.",
+      "Если вы столкнетесь с какими-либо проблемами при использовании шаблона, пожалуйста, свяжитесь с нами через Twitter @chenchenyyds.",
   },
 ];
 
